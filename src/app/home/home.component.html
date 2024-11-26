@@ -1,0 +1,20 @@
+<div class="fs-5">
+  @if (shouldShowDownloadButton) {
+    Download the sample inspection report by clicking the button below.
+  } @else {
+    Login to download the inspection report.
+  }
+
+</div>
+
+@if (shouldShowDownloadButton) {
+  <div class="download-container w-100 d-flex flex-row justify-content-center align-items-center gap-3 p-4">
+    <button class="btn btn-primary" (click)="downloadInspectionReport(1)" [disabled]="isLoading">
+      @if (isLoading) {
+        Downloading... <i class="fas fa-spinner fa-spin"></i>
+      } @else {
+        Download Inspection Report
+      }
+    </button>
+  </div>
+}

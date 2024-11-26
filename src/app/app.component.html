@@ -1,0 +1,7 @@
+<div class="container flex flex-column w-100">
+  <app-navbar *ngIf="hasNavbar()"></app-navbar>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer *ngIf="hasFooter()"></app-footer>
+</div>

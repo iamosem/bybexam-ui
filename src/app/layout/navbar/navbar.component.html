@@ -1,0 +1,18 @@
+<div class="navbar d-flex flex-row justify-content-start align-items-center w-100 gap-2">
+
+  <div class="flex-grow-1">
+    <a class="logo btn btn-link text-left text-decoration-none text-secondary p-0" [routerLink]="['/']">
+      BYB EXAM UI
+    </a>
+  </div>
+
+  <div class="navbar-center d-flex flex-row gap-3">
+    <a class="text-decoration-none text-secondary" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
+    @if (!isLoggedIn) {
+      <a class="text-decoration-none text-secondary" [routerLink]="['/auth/register']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">REGISTER</a>
+      <a class="text-decoration-none text-secondary" [routerLink]="['/auth/login']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">LOGIN</a>
+    } @else {
+      <a class="text-decoration-none text-secondary cursor-pointer" role="button" (click)="logout()">LOGOUT</a>
+    }
+  </div>
+</div>
