@@ -1,27 +1,84 @@
-# BybexamUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+# BYB Exam UI
 
-## Development server
+The UI that uses BYB Exam API for BYB Technical Challenge.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is an Angular project that showcases functionalities such as user authentication (login and registration), and downloading a sample inspection report. The application is built with modern web technologies including Angular, Bootstrap, and RxJS, ensuring a secured access to important files from the server.
 
-## Code scaffolding
+Note, that proper styling and validations were not included in this implementation.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone the repository:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+git clone git@github.com:iamosem/bybexam-ui.git
+cd bybexam-ui
+```
 
-## Running unit tests
+2. Install dependencies by running
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+yarn install #or simply yarn
+```
 
-## Running end-to-end tests
+## Run Locally
+Install dependencies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+yarn
+```
 
-## Further help
+Start the application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+yarn start
+```
+
+## Project Structure
+
+
+```
+
+src/
+  app/
+    auth/
+      guards/
+      login/
+      register/
+      auth-router.module.ts
+    home/
+    layout/
+    models/
+    services/
+    app-routing.module.ts
+    app.component.html
+    app.component.scss
+    app.component.spec.ts
+    app.component.ts
+    app.constants.ts
+    app.module.ts
+  assets/
+  environments/
+  index.html
+  main.ts
+  polyfills.ts
+  styles.scss
+  test.ts
+angular.json
+karma.conf.js
+package.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
+```
+
+
+## Potential Improvements
+
+- Implement more input/form validations
+- Add CRUD for managing Products
+- Add CRUD for managing Orders
+- Implement responsive styling
+- Implement more authentication guards
